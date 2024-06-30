@@ -1,6 +1,12 @@
-import { Accordion } from "@mantine/core";
+import { Accordion, Text} from "@mantine/core";
 import { Faq } from "./modals/Faq";
 import { useState } from "react";
+import { colors } from "./colors";
+import styled from "@emotion/styled";
+
+const ChevronIcon = styled.img({
+    height: '25px',
+});
 
 interface FaqAccordionProps {
     initialFaqs: Faq[];
@@ -18,7 +24,15 @@ const FaqAccordion = (props: FaqAccordionProps) => {
     };
 
     return (
-        <Accordion multiple>
+        <Accordion multiple styles={{
+            panel: {
+                color: colors.grayishPurple,
+                fontSize: '13px',
+            },
+            chevron: {
+                width: '25px'
+            }
+        }}>
             {
                 faqs.map((item, index) => {
                     return (
@@ -34,11 +48,11 @@ const FaqAccordion = (props: FaqAccordionProps) => {
                                 value={item.question}
                                 onClick={onAccordionItemClick}
                                 chevron={item.isActive ? 
-                                    <img src="icon-minus.svg" alt="minus"></img> : 
-                                    <img src="icon-plus.svg" alt="plus"></img> 
+                                    <ChevronIcon src="icon-minus.svg" alt="minus"></ChevronIcon> : 
+                                    <ChevronIcon src="icon-plus.svg" alt="plus"></ChevronIcon> 
                                 }
                              >
-                                {item.question}
+                                <Text size="sm" fw={700}>{item.question}</Text>
                              </Accordion.Control>
                             <Accordion.Panel>{item.answer}</Accordion.Panel>
                         </Accordion.Item>
