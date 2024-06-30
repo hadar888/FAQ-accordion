@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/FAQ-accordion/static/css/main.1aaa0bc3.css",
+    "main.js": "/FAQ-accordion/static/js/main.06ad18a4.js",
+    "static/js/453.4940cf0d.chunk.js": "/FAQ-accordion/static/js/453.4940cf0d.chunk.js",
+    "index.html": "/FAQ-accordion/index.html",
+    "main.1aaa0bc3.css.map": "/FAQ-accordion/static/css/main.1aaa0bc3.css.map",
+    "main.06ad18a4.js.map": "/FAQ-accordion/static/js/main.06ad18a4.js.map",
+    "453.4940cf0d.chunk.js.map": "/FAQ-accordion/static/js/453.4940cf0d.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1aaa0bc3.css",
+    "static/js/main.06ad18a4.js"
+  ]
+}
